@@ -173,6 +173,7 @@ function Sidebar(loopy){
 			"<hr/><br>"+
 
 			"<span class='mini_button' onclick='publish(\"modal\",[\"save_link\"])'>Save as link</span> <br><br>"+
+			"<span class='mini_button' onclick='publish(\"modal\",[\"mail_link\"])'>Mail Link to repository</span> <br><br>"+
 			"<span class='mini_button' onclick='publish(\"modal\",[\"embed\"])'>Embed in your website</span> <br><br>"+
 			
 			"<hr/><br>"+
@@ -444,5 +445,5 @@ function ComponentOutput(config){
 	self.output = function(string){
 		self.dom.value = string;
 	};
-
+	
 }

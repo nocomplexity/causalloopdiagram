@@ -86,37 +86,23 @@ function Modal(loopy){
 
 	})();
 
-	// Credits
-	(function(){
-		var page = new Page();
-		page.width = 690;
-		page.height = 550;
-		page.addComponent(new ModalIframe({
-			page: page,
-			src: "pages/credits/",
-			width: 660,
-			height: 500
-		}))
-		self.addPage("credits", page);
-	})();
-
-
+	
 	// Save as link
 	(function(){
 		var page = new Page();
 		page.width = 500;
-		page.height = 155;
+		page.height = 300;
 		page.addComponent(new ComponentHTML({
-			html: "copy your link:"
+			html: "Save your link:<br>"
 		}));
 		var output = page.addComponent(new ComponentOutput({}));
 
 		var label = document.createElement("div");
-		label.style.textAlign = "right";
+		label.style.textAlign = "left";
 		label.style.fontSize = "15px";
 		label.style.marginTop = "6px";
-		label.style.color = "#888";
-		label.innerHTML = "(this is a long URL, so you may want to use a link-shortener like <a target='_blank' href='https://bitly.com/'>bit.ly</a>)";
+		label.style.color = "#000000";
+		label.innerHTML = "You can use the saved link to display <br>your Causal Loop Diagram when you want!";
 		page.dom.appendChild(label);
 
 		// chars left...
@@ -124,8 +110,8 @@ function Modal(loopy){
 		chars.style.textAlign = "right";
 		chars.style.fontSize = "15px";
 		chars.style.marginTop = "3px";
-		chars.style.color = "#888";
-		chars.innerHTML = "X out of 2048 characters";
+		chars.style.color = "#000000";
+		chars.innerHTML = "<br>Thank you for using this Nocomplexity.com tool!";
 		page.dom.appendChild(chars);
 
 		page.onshow = function(){
@@ -136,11 +122,11 @@ function Modal(loopy){
 			output.dom.select();
 
 			// Chars left
-			var html = link.length+" / 2048 characters";
+			var html = link.length+" / of max 2048 characters";
 			if(link.length>2048){
 				html += " - MAY BE TOO LONG FOR MOST BROWSERS";
 			}
-			chars.innerHTML = html;
+			chars.innerHTML = html + "<br><br>Thank you for using this Nocomplexity.com tool!";
 			chars.style.fontWeight = (link.length>2048) ? "bold" : "100";
 			chars.style.fontSize = (link.length>2048) ? "14px" : "15px";
 
@@ -149,6 +135,56 @@ function Modal(loopy){
 		// or, tweet it
 		self.addPage("save_link", page);
 	})();
+
+
+// Mail as link (added by MM)
+(function(){
+	var page = new Page();
+	page.width = 550;
+	page.height = 400;
+	page.addComponent(new ComponentHTML({
+		html: "<div id=mail>Getting added to the repository is simple!<br>"
+	}));
+	
+    
+	var output = page.addComponent(new ComponentOutput({}));
+	page.onshow  = function(){
+		// Copy-able link
+		var link = loopy.saveToURL();
+		output.output(link);
+		output.dom.select();
+		//output.dom.component_output.hidden();
+				//console.log('This is link:' + link);	
+
+		var label = document.createElement("div");
+		label.style.textAlign = "left";
+		label.style.fontSize = "14px";
+		label.style.marginTop = "6px";
+		label.style.color = "#000000";
+		label.innerHTML = '<br>To add your Causal Loop Diagram in the repository, please e-mail belows to: <br>info [at]bm-support.org <br>  This is the link: <br><textarea rows="4">' + String(link) + '</textarea>';
+		page.dom.appendChild(label);
+
+		}
+		
+ 
+	
+	// chars left...
+	var chars = document.createElement("div");
+	chars.style.textAlign = "right";
+	chars.style.fontSize = "15px";
+	chars.style.marginTop = "3px";
+	chars.style.color = "#000000";
+	chars.innerHTML = "<br>Thank you for using this Nocomplexity.com tool!</div>";
+	page.dom.appendChild(chars);
+
+	
+	
+
+	// or, tweet it
+	self.addPage("mail_link", page);
+})();
+
+
 
 	// Embed
 	(function(){
