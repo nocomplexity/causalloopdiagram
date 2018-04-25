@@ -102,7 +102,7 @@ function Modal(loopy){
 		label.style.fontSize = "15px";
 		label.style.marginTop = "6px";
 		label.style.color = "#000000";
-		label.innerHTML = "You can use the saved link to display <br>your Causal Loop Diagram when you want!";
+		label.innerHTML = "<br>You can use the saved link to display your Causal Loop Diagram when you want!";
 		page.dom.appendChild(label);
 
 		// chars left...
@@ -151,18 +151,19 @@ function Modal(loopy){
 	page.onshow  = function(){
 		// Copy-able link
 		var link = loopy.saveToURL();
-		output.output(link);
-		output.dom.select();
-		//output.dom.component_output.hidden();
-				//console.log('This is link:' + link);	
+		//output.output(link);
+		//output.dom.select();
+		
+		console.log('This is link:' + link);	
 
 		var label = document.createElement("div");
 		label.style.textAlign = "left";
 		label.style.fontSize = "14px";
 		label.style.marginTop = "6px";
 		label.style.color = "#000000";
-		label.innerHTML = '<br>To add your Causal Loop Diagram in the repository, please e-mail belows to: <br>info [at]bm-support.org <br>  This is the link: <br><textarea rows="4">' + String(link) + '</textarea>';
-		page.dom.appendChild(label);
+		label.innerHTML = '<br>If you want your Causal Loop Diagram added to our the repository, send your email to: <br>info [at]bm-support.org <br>  This is the link: <br><br>'+ link ;
+		//page.dom.appendChild(label);
+		page.dom.replaceChild(label, page.dom.childNodes[0]);
 
 		}
 		
@@ -177,8 +178,7 @@ function Modal(loopy){
 	chars.innerHTML = "<br>Thank you for using this Nocomplexity.com tool!</div>";
 	page.dom.appendChild(chars);
 
-	
-	
+		
 
 	// or, tweet it
 	self.addPage("mail_link", page);
