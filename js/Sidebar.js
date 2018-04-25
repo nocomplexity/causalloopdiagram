@@ -172,13 +172,13 @@ function Sidebar(loopy){
 			
 			"<hr/><br>"+
 
-			"<span class='mini_button' onclick='publish(\"modal\",[\"save_link\"])'>save as link</span> <br><br>"+
-			"<span class='mini_button' onclick='publish(\"modal\",[\"embed\"])'>embed in your website</span> <br><br>"+
+			"<span class='mini_button' onclick='publish(\"modal\",[\"save_link\"])'>Save as link</span> <br><br>"+
+			"<span class='mini_button' onclick='publish(\"modal\",[\"embed\"])'>Embed in your website</span> <br><br>"+
 			
 			"<hr/><br>"+
 				
 			"<div id=bms><a target='_blank' href='https://www.bm-support.org/'> Radical Open Innovation <br>Solving Problems Together</a></div>" +
-			"<div id=credits><br><br><hr><br>(c) 2018 Maikel Mardjan - Software licensed GPLv3. This project is a fork of <a target='_blank' href='http://ncase.me/loopy/'>http://ncase.me/loopy/. </a></div>"
+			"<div id=credits><br><br><hr><br>(c) 2018 Maikel Mardjan - Licensed GPLv3. Contributions are welcome!<a target='_blank' href='https://github.com/nocomplexity/'>Software Repository</a></div>"
 			 			
 
 		}));

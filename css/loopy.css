@@ -142,11 +142,9 @@ div[big=yes] .play_button_label{
 	top:0; right:0;
 	width: 300px;
 	height: 100%;
-	background: white;
-
+	background:#E6E6E6;
 	font-weight: 100;
 	font-size: 17px;
-
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -159,17 +157,21 @@ div[big=yes] .play_button_label{
 	margin-bottom: 20px;
 }
 #sidebar[mode=play]{
-	background: white;
+	background:#E6E6E6;
 	color: black;
 }
 #sidebar .mini_button{
 	background: #FF0000;
 	color: #fff;
 	padding: 3px 5px;
-	border-radius: 2px;
 	font-size: 16px;
-
+	border-radius: 3px 3px 3px 3px;
 	cursor: pointer;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+
 }
 #sidebar .mini_button:hover{
 	background: #ff0000;
@@ -321,15 +323,18 @@ MODAL
 }
 
 #bms {
-    text-align: center;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
 	background: #08088A;
 	color: #ffffff;
 	bottom: auto;
+	border-radius: 5px 5px 5px 5px;	
 	}
 
 #bms a:link, a:visited {
     background: #08088A;
-    color: white;    
+	color: white;
+	padding: 10px;    
     text-align: center;
     text-decoration: none;
 	display: inline-block;
@@ -338,6 +343,11 @@ MODAL
 #bms a:hover, a:active {
     background-color: #08088A;
 }
+
+#bms a:visited {
+    color: #ffffff;
+}
+
 
 #credits {
 	font-size: 10px;
