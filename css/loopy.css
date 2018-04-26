@@ -351,18 +351,3 @@ MODAL
 #credits {
 	font-size: 10px;
 	}
-#mail {
-		width: 100%;
-	}
-
-#mailbutton input[type=button], input[type=submit], input[type=reset] {
-		background-color: #FF0000;
-		border: none;
-		color: white;
-		padding: 5px 5px;
-		border-radius: 3px 3px 3px 3px;
-		text-decoration: none;
-		margin: 4px 2px;
-		cursor: pointer;
-		font-size: 20px;
-	}

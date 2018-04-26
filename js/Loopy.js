@@ -164,7 +164,10 @@ function Loopy(config){
 	};
 	
 	// "BLANK START" DATA:
-	var _blankData = "[[[1,403,223,1,%22something%22,4],[2,405,382,1,%22something%2520else%22,5]],[[2,1,94,-1,0],[1,2,89,1,0]],[[609,311,%22need%2520ideas%2520on%2520what%2520to%250Asimulate%253F%2520how%2520about%253A%250A%250A%25E3%2583%25BBtechnology%250A%25E3%2583%25BBenvironment%250A%25E3%2583%25BBeconomics%250A%25E3%2583%25BBbusiness%250A%25E3%2583%25BBpolitics%250A%25E3%2583%25BBculture%250A%25E3%2583%25BBpsychology%250A%250Aor%2520better%2520yet%252C%2520a%250A*combination*%2520of%250Athose%2520systems.%250Ahappy%2520modeling!%22]],2%5D";
+	
+	var _blankData ='[[[4,675,269,0.5,%22Effect%22,3],[9,521,241,0.5,%22Side%2520effect%22,5],[11,524,416,0.5,%22External%2520influence%22,4],[13,361,257,0.5,%22Cause%22,0]],[[9,4,8,1,0],[13,9,63,1,0],[11,4,10,1,0],[11,9,-5,1,0],[4,9,-66,-1,0],[11,13,20,-1,0]],[[516,140,%22Direct%2520causal%2520relations%250Aare%2520never%2520there..%22],[755,453,%22CLD%27s%2520will%2520help%2520you%2520too!%2520%250A%250AUse%2520it%2520for%2520discovering%2520of%253A%250A-%2520Digital%2520Innovation%250A-%2520Organizational%2520%250A-%2520Changes%250A-%2520Business%2520cases%250AAnd%2520to%2520solve%2520problems!%22]],13%5D';
+		
+
 
 	self.loadFromURL = function(){
 		var data = _getParameterByName("data");

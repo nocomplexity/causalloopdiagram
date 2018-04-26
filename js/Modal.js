@@ -168,18 +168,12 @@ function Modal(loopy){
 		label.style.marginTop = "6px";
 		label.style.color = "#000000";
 
-		var bodytext = 'If you want your Causal Loop Diagram added to our open access CLD repository, send your email to:%0D%0A info [at]bm-support [dot] org %0D%0A';
+		var bodytext = 'If you want your Causal Loop Diagram added to our open access CLD repository, send your email to: info [at]bm-support [dot] org %0D%0A %0D%0A This is the link to your diagram:%0D%0A%0D%0A';
 		
 
-		var mailstring = '<form action="mailto:?subject=Causal-Loop-Diagram&body=' + bodytext + '"method="post" enctype="text/plain">';
-		mailstring = mailstring + 'Enter your Causal Loop Diagram name:<br>';
-		mailstring = mailstring + '<input id="mail" type="text" name="CausalLoopDiagram-name" "><br><br>';
-		mailstring = mailstring + '<input type="hidden" name="link" value=' + link + '>';
-		mailstring = mailstring + '<input id="mailbutton" type="submit" value="Mail my Causal Loop Diagram">';
-		mailstring = mailstring + '<input type="reset" value="Reset">';
-		mailstring = mailstring + '</form>';
-
-		label.innerHTML = '<br>If you want your Causal Loop Diagram added to our the repository, send your email to: <br>info [at]bm-support.org <br>  This is the link: <br><br>'+ mailstring + html;
+		var mailstring = '<div id=bms><a href="mailto:change.this@your.name?subject=Causal-Loop-Diagram&body=' + bodytext + link + '">' + 'Mail-Link-To-YOUR-DIAGRAM' + '</a></div>';
+		
+		label.innerHTML = '<br>If you want your Causal Loop Diagram added to our the repository, send your email to: info [at]bm-support.org <br><br> '+ mailstring + '<br><br>' + html;
 		//page.dom.appendChild(label);
 		page.dom.replaceChild(label, page.dom.childNodes[1]);
 		
