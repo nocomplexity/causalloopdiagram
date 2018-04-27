@@ -161,6 +161,7 @@ function Modal(loopy){
 		if(link.length>2048){
 			html += " - MAY BE TOO LONG FOR MOST BROWSERS<br>";
 		}
+		
 
 		var label = document.createElement("div");
 		label.style.textAlign = "left";
@@ -171,9 +172,10 @@ function Modal(loopy){
 		var bodytext = 'If you want your Causal Loop Diagram added to our open access CLD repository, send your email to: info [at]bm-support [dot] org %0D%0A %0D%0A This is the link to your diagram:%0D%0A%0D%0A';
 		
 
-		var mailstring = '<div id=bms><a href="mailto:change.this@your.name?subject=Causal-Loop-Diagram&body=' + bodytext + link + '">' + 'Mail-Link-To-YOUR-DIAGRAM' + '</a></div>';
+		var mailstring = '<div id=bms><a href="mailto:change.this@your.name?subject=Causal-Loop-Diagram&body=' + bodytext + encodeURIComponent(link) + '">' + 'Mail-Link-To-YOUR-DIAGRAM' + '</a></div>';
+		//note the encodeURI is crucial!
 		
-		label.innerHTML = '<br>If you want your Causal Loop Diagram added to our the repository, send your email to: info [at]bm-support.org <br><br> '+ mailstring + '<br><br>' + html;
+		label.innerHTML = '<br>If you want your Causal Loop Diagram added to our the repository, send your email to: info [at]bm-support.org <br><br> '+ mailstring + '<br><br>' + html + '<br>';
 		//page.dom.appendChild(label);
 		page.dom.replaceChild(label, page.dom.childNodes[1]);
 		
